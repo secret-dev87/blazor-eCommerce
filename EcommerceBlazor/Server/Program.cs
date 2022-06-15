@@ -1,6 +1,6 @@
 global using EcommerceBlazor.Shared;
 global using Microsoft.EntityFrameworkCore;
-using EcommerceBlazor.Server.Data;
+global using EcommerceBlazor.Server.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

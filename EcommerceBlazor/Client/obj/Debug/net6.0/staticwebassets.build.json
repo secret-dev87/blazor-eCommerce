@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Cdgyugs/5OBAKHRxGAxXsUgO6mRCOXLFVn99O2vngqU=",
+  "Hash": "hJBQrHNKTcH7yxU8S96vm16dkI0Ge0VHOyyB5kpqFU4=",
   "Source": "EcommerceBlazor.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -170,23 +170,6 @@
       "OriginalItemSpec": "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Shared\\bin\\Debug\\net6.0\\EcommerceBlazor.Shared.pdb"
     },
     {
-      "Identity": "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt.dat",
-      "SourceId": "EcommerceBlazor.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt.dat",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "BlazorWebAssemblyResource",
-      "AssetTraitValue": "native",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\dawni\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.5\\runtimes\\browser-wasm\\native\\icudt.dat"
-    },
-    {
       "Identity": "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt_CJK.dat",
       "SourceId": "EcommerceBlazor.Client",
       "SourceType": "Computed",
@@ -236,6 +219,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\dawni\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.5\\runtimes\\browser-wasm\\native\\icudt_no_CJK.dat"
+    },
+    {
+      "Identity": "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt.dat",
+      "SourceId": "EcommerceBlazor.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt.dat",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "native",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\dawni\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.5\\runtimes\\browser-wasm\\native\\icudt.dat"
     },
     {
       "Identity": "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
@@ -6953,6 +6953,23 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
+      "Identity": "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "SourceId": "EcommerceBlazor.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/open-iconic/FONT-LICENSE",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
+    },
+    {
       "Identity": "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "EcommerceBlazor.Client",
       "SourceType": "Discovered",
@@ -7053,23 +7070,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
-    },
-    {
-      "Identity": "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
-      "SourceId": "EcommerceBlazor.Client",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Client\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "css/open-iconic/FONT-LICENSE",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
       "Identity": "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Client\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
