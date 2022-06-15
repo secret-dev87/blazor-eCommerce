@@ -1,27 +1,28 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
+//thin controller which is used solely to recieve requests
+//from a client and call a service which deals with logic
 namespace EcommerceBlazor.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly DataContext _context;
+        private readonly IProductService _productService;
 
-        //Adding DbContext using DI
-        public ProductsController(DataContext context)
+        public ProductsController(IProductService productService)
         {
-            _context = context;
+            _productService = productService;
         }
 
         [HttpGet]
-        //detects a call and returns data by using Ok method
-        public async Task<ActionResult<List<Product>>> GetProducts()
+        //detects a request and returns data by using Ok method
+        public async Task<ActionResult<ServiceResponse<List<Product>>>> GetProducts()
         {
             //Via DbContext access Products table in the DB to return the data
-            var products = await _context.Products.ToListAsync(); 
-            return Ok(products);
+            var result = await _productService.GetProductsAsync();
+            return Ok(result);
         }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Shared\\EcommerceBlazor.Shared.csproj": {}
+    "D:\\c#\\EcommerceBlazor\\BlazorEcommerce\\EcommerceBlazor\\Shared\\EcommerceBlazor.Shared.csproj": {}
   },
   "projects": {
-    "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Shared\\EcommerceBlazor.Shared.csproj": {
+    "D:\\c#\\EcommerceBlazor\\BlazorEcommerce\\EcommerceBlazor\\Shared\\EcommerceBlazor.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Shared\\EcommerceBlazor.Shared.csproj",
+        "projectUniqueName": "D:\\c#\\EcommerceBlazor\\BlazorEcommerce\\EcommerceBlazor\\Shared\\EcommerceBlazor.Shared.csproj",
         "projectName": "EcommerceBlazor.Shared",
-        "projectPath": "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Shared\\EcommerceBlazor.Shared.csproj",
+        "projectPath": "D:\\c#\\EcommerceBlazor\\BlazorEcommerce\\EcommerceBlazor\\Shared\\EcommerceBlazor.Shared.csproj",
         "packagesPath": "C:\\Users\\dawni\\.nuget\\packages\\",
-        "outputPath": "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Shared\\obj\\",
+        "outputPath": "D:\\c#\\EcommerceBlazor\\BlazorEcommerce\\EcommerceBlazor\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dawni\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -54,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

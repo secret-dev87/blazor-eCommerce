@@ -2764,11 +2764,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Server\\EcommerceBlazor.Server.csproj",
+      "projectUniqueName": "D:\\c#\\EcommerceBlazor\\BlazorEcommerce\\EcommerceBlazor\\Server\\EcommerceBlazor.Server.csproj",
       "projectName": "EcommerceBlazor.Server",
-      "projectPath": "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Server\\EcommerceBlazor.Server.csproj",
+      "projectPath": "D:\\c#\\EcommerceBlazor\\BlazorEcommerce\\EcommerceBlazor\\Server\\EcommerceBlazor.Server.csproj",
       "packagesPath": "C:\\Users\\dawni\\.nuget\\packages\\",
-      "outputPath": "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Server\\obj\\",
+      "outputPath": "D:\\c#\\EcommerceBlazor\\BlazorEcommerce\\EcommerceBlazor\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dawni\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2785,11 +2785,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Client\\EcommerceBlazor.Client.csproj": {
-              "projectPath": "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Client\\EcommerceBlazor.Client.csproj"
+            "D:\\c#\\EcommerceBlazor\\BlazorEcommerce\\EcommerceBlazor\\Client\\EcommerceBlazor.Client.csproj": {
+              "projectPath": "D:\\c#\\EcommerceBlazor\\BlazorEcommerce\\EcommerceBlazor\\Client\\EcommerceBlazor.Client.csproj"
             },
-            "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Shared\\EcommerceBlazor.Shared.csproj": {
-              "projectPath": "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Shared\\EcommerceBlazor.Shared.csproj"
+            "D:\\c#\\EcommerceBlazor\\BlazorEcommerce\\EcommerceBlazor\\Shared\\EcommerceBlazor.Shared.csproj": {
+              "projectPath": "D:\\c#\\EcommerceBlazor\\BlazorEcommerce\\EcommerceBlazor\\Shared\\EcommerceBlazor.Shared.csproj"
             }
           }
         }
@@ -2845,7 +2845,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

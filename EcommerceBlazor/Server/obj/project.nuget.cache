@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HgadcLDI3VIBbYU7prajLyq3L23nmvppL4+RX7YDviSF7zBYbIYVt7jL2gJko+jNaFGRP4IPo2/hyp06FR7x5g==",
+  "dgSpecHash": "vzb195Bwy5UehmNpWfl2OooXOJ8GywcjBZaM6/gnOz81SWxPX/QMsdVLUNvOxFi/ePNjRAJfIw5EU7TV68MGeg==",
   "success": true,
-  "projectFilePath": "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Server\\EcommerceBlazor.Server.csproj",
+  "projectFilePath": "D:\\c#\\EcommerceBlazor\\BlazorEcommerce\\EcommerceBlazor\\Server\\EcommerceBlazor.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dawni\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\dawni\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.5\\microsoft.aspnetcore.authorization.6.0.5.nupkg.sha512",

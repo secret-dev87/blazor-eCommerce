@@ -1577,11 +1577,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Client\\EcommerceBlazor.Client.csproj",
+      "projectUniqueName": "D:\\c#\\EcommerceBlazor\\BlazorEcommerce\\EcommerceBlazor\\Client\\EcommerceBlazor.Client.csproj",
       "projectName": "EcommerceBlazor.Client",
-      "projectPath": "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Client\\EcommerceBlazor.Client.csproj",
+      "projectPath": "D:\\c#\\EcommerceBlazor\\BlazorEcommerce\\EcommerceBlazor\\Client\\EcommerceBlazor.Client.csproj",
       "packagesPath": "C:\\Users\\dawni\\.nuget\\packages\\",
-      "outputPath": "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Client\\obj\\",
+      "outputPath": "D:\\c#\\EcommerceBlazor\\BlazorEcommerce\\EcommerceBlazor\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dawni\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1598,8 +1598,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Shared\\EcommerceBlazor.Shared.csproj": {
-              "projectPath": "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Shared\\EcommerceBlazor.Shared.csproj"
+            "D:\\c#\\EcommerceBlazor\\BlazorEcommerce\\EcommerceBlazor\\Shared\\EcommerceBlazor.Shared.csproj": {
+              "projectPath": "D:\\c#\\EcommerceBlazor\\BlazorEcommerce\\EcommerceBlazor\\Shared\\EcommerceBlazor.Shared.csproj"
             }
           }
         }
@@ -1637,7 +1637,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-            "version": "[6.0.5, 6.0.5]"
+            "version": "[6.0.6, 6.0.6]"
           }
         ],
         "frameworkReferences": {
@@ -1645,7 +1645,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

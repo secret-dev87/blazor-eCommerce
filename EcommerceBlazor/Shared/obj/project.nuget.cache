@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vVJc1gBfPKUmdzqSh/wqWqoTEumDw3F8mptQa9Dr/TDHVPcjJg/ETpQ049b95Z92lTHWmCF800aWdjdYgH5H6g==",
+  "dgSpecHash": "n8orPV0IoaUKXZ/Y6bajRbNXleyMKBKjgi+HLv2nUohuHELWJ2d///igJrY34eWfKSR906y6cjlbvrM+dtgEuQ==",
   "success": true,
-  "projectFilePath": "D:\\c#\\EcommerceBlazor\\EcommerceBlazor\\Shared\\EcommerceBlazor.Shared.csproj",
+  "projectFilePath": "D:\\c#\\EcommerceBlazor\\BlazorEcommerce\\EcommerceBlazor\\Shared\\EcommerceBlazor.Shared.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
