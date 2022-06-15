@@ -1,8 +1,16 @@
 global using EcommerceBlazor.Shared;
+global using Microsoft.EntityFrameworkCore;
+using EcommerceBlazor.Server.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+    // Add services to the container.
+
+// Register DataContext and Configure it for the SqlServer
+builder.Services.AddDbContext<DataContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();

@@ -24,13 +24,13 @@
 
 		
 @code {
-	private static List<Products> Products = new List<Products>();
+	private static List<Product> Products = new List<Product>();
 
 	protected override async Task OnInitializedAsync() //when page loaded it automatically call this method
 	{
 		//sends a request to api/Products and grab all the data from there
 		//and place it into Products list so then it could be shown on the Index page
-		var result = await Http.GetFromJsonAsync<List<Products>>("api/Products");
+		var result = await Http.GetFromJsonAsync<List<Product>>("api/Products");
 		if (result != null)
 			Products = result;
 	}

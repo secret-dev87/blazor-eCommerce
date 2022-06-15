@@ -7,10 +7,10 @@ namespace EcommerceBlazor.Server.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private static List<Products> Products = new List<Products>
+        private static List<Product> Products = new List<Product>
         {
 		    //mock products
-		    new Products
+		    new Product
             {
                 Id = 1,
                 Title = "Breaking Bad",
@@ -18,7 +18,7 @@ namespace EcommerceBlazor.Server.Controllers
                 ImageUrl = "https://content2.rozetka.com.ua/goods/images/big/23632594.jpg",
                 Price = 11.99m
             },
-            new Products
+            new Product
             {
                 Id = 2,
                 Title = "Raised by Wolves",
@@ -26,7 +26,7 @@ namespace EcommerceBlazor.Server.Controllers
                 ImageUrl = "https://upload.wikimedia.org/wikipedia/ru/6/64/Raised_by_Wolves_%28TV%29.jpg",
                 Price = 7.99m
             },
-            new Products
+            new Product
             {
                 Id = 3,
                 Title = "True Detective",
@@ -38,7 +38,7 @@ namespace EcommerceBlazor.Server.Controllers
 
         [HttpGet]
         //detects a call and pass the data by using Ok method
-        public async Task<ActionResult<List<Products>>> GetProducts()
+        public async Task<ActionResult<List<Product>>> GetProducts()
         {
             return Ok(Products);
         }
