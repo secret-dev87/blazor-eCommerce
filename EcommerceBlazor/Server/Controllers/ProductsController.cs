@@ -38,7 +38,7 @@ namespace EcommerceBlazor.Server.Controllers
 
         [HttpGet]
         //detects a call and pass the data by using Ok method
-        public async Task<IActionResult> GetProducts()
+        public async Task<ActionResult<List<Products>>> GetProducts()
         {
             return Ok(Products);
         }

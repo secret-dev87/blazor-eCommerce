@@ -45,3 +45,8 @@ D:\c#\EcommerceBlazor\EcommerceBlazor\Server\obj\Debug\net6.0\refint\EcommerceBl
 D:\c#\EcommerceBlazor\EcommerceBlazor\Server\obj\Debug\net6.0\EcommerceBlazor.Server.pdb
 D:\c#\EcommerceBlazor\EcommerceBlazor\Server\obj\Debug\net6.0\EcommerceBlazor.Server.genruntimeconfig.cache
 D:\c#\EcommerceBlazor\EcommerceBlazor\Server\obj\Debug\net6.0\ref\EcommerceBlazor.Server.dll
+D:\c#\EcommerceBlazor\EcommerceBlazor\Server\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\c#\EcommerceBlazor\EcommerceBlazor\Server\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\c#\EcommerceBlazor\EcommerceBlazor\Server\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\c#\EcommerceBlazor\EcommerceBlazor\Server\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\c#\EcommerceBlazor\EcommerceBlazor\Server\obj\Debug\net6.0\EcommerceBlazor.Server.MvcApplicationPartsAssemblyInfo.cs
