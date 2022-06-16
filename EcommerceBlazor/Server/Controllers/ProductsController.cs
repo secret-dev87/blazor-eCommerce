@@ -11,6 +11,10 @@ namespace EcommerceBlazor.Server.Controllers
     {
         private readonly IProductService _productService;
 
+        //by Injecting IProductService here I call a service
+        //which I've added in Program.cs file and it uses exactly ProductService service
+        //which may be replaced there by any other newly created service.
+        //so in fact Interfaces allow to do DI convinient
         public ProductsController(IProductService productService)
         {
             _productService = productService;
@@ -20,7 +24,7 @@ namespace EcommerceBlazor.Server.Controllers
         //detects a request and returns data by using Ok method
         public async Task<ActionResult<ServiceResponse<List<Product>>>> GetProducts()
         {
-            //Via DbContext access Products table in the DB to return the data
+            //because of DI, here ProductService solution is used, not Interface's one
             var result = await _productService.GetProductsAsync();
             return Ok(result);
         }

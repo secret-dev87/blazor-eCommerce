@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace EcommerceBlazor.Shared
 {
+    // This class brings flexibility to responses during http request calls
     public class ServiceResponse<T>
     {
         public T? Data { get; set; }

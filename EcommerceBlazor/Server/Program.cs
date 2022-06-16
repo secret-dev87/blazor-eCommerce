@@ -20,6 +20,10 @@ builder.Services.AddRazorPages();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//This Service allows to use ProductService as implementation of IProductService methods
+//As soon as IProductService was Injected somewhere in the program.
+//By placing it here I can change ProductService to any other Service I create
+//So the implementations of Interface methods will also change
 builder.Services.AddScoped<IProductService, ProductService>();
 
 var app = builder.Build();

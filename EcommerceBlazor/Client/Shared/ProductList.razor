@@ -1,38 +1,37 @@
-﻿@inject HttpClient Http 
+﻿@inject IProductService ProductService
 
-<ul class="list-unstyled">
-	@foreach (var product in Products)
-	{
-		<li class="media my-3">
-			<div class="media-img-wrapper mr-2">
-				<a href="#">
-					<img class="media-img" src="@product.ImageUrl" alt="@product.Title" />
-				</a>
-			</div>
-			<div class="media-body">
-				<a href="#">
-					<h4 class="mb-0">@product.Title</h4>
-				</a>
-				<p>@product.Description</p>
-				<h5 class="price">
-					$@product.Price
-				</h5>
-			</div>
-		</li>
-	}
-</ul>
+@if (ProductService.Products == null || ProductService.Products.Count == 0)
+{
+    <span>Loading Products...</span>
+}
+else
+{
+    <ul class="list-unstyled">
+        @foreach (var product in ProductService.Products)
+        {
+            <li class="media my-3">
+                <div class="media-img-wrapper mr-2">
+                    <a href="#">
+                        <img class="media-img" src="@product.ImageUrl" alt="@product.Title" />
+                    </a>
+                </div>
+                <div class="media-body">
+                    <a href="#">
+                        <h4 class="mb-0">@product.Title</h4>
+                    </a>
+                    <p>@product.Description</p>
+                    <h5 class="price">
+                        $@product.Price
+                    </h5>
+                </div>
+            </li>
+        }
+    </ul>
+}
 
-		
 @code {
-	private static List<Product> Products = new List<Product>();
-
-	protected override async Task OnInitializedAsync() //when the page is loaded
-													  //it automatically calls this method
-	{
-		//sends a request to ProductsController and grab all the data from there
-		//and place it into ProductList so it's shown on the Index page
-		var result = await Http.GetFromJsonAsync<ServiceResponse<List<Product>>>("api/Products"); //get request
-		if (result != null && result.Data != null)
-			Products = result.Data;
-	}
+    protected override async Task OnInitializedAsync()
+    {
+        await ProductService.GetProducts();
+    }
 }
