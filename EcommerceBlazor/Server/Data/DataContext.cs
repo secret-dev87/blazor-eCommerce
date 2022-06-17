@@ -31,7 +31,7 @@
                     Id = 3,
                     Title = "True Detective",
                     Description = "Constructed as a nonlinear narrative, season one focuses on Louisiana State Police homicide detectives Rustin Rust Cohle (McConaughey) and Martin Marty Hart (Harrelson), who investigated the murder of prostitute Dora Lange in 1995. Seventeen years later, they must revisit the investigation, along with several other unsolved crimes. During this time, Hart's infidelity threatens his marriage to Maggie (Monaghan), and Cohle struggles to cope with his troubled past.",
-                    ImageUrl = "http://ic.pics.livejournal.com/iskander_zombie/17864134/1500378/1500378_original.jpg",
+                    ImageUrl = "https://i.pinimg.com/originals/73/61/58/7361583898d2e42805a913c10bfa39fb.jpg",
                     Price = 10.99m
                 });
         }

@@ -17,22 +17,9 @@
         transform: scale(1.1);
     }
 
-.media[b-6ca97eypqo] {
-    display: flex;
-    align-items: flex-start;
-}
-
-.media-body[b-6ca97eypqo] {
-    flex: 1;
-}
-
 .media-img-wrapper[b-6ca97eypqo] {
     width: 200px;
     text-align: center;
-}
-
-.price[b-6ca97eypqo] {
-    color: green;
 }
 
 @media (max-width: 1023.98px) {

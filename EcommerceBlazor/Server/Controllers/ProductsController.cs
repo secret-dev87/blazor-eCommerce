@@ -28,5 +28,14 @@ namespace EcommerceBlazor.Server.Controllers
             var result = await _productService.GetProductsAsync();
             return Ok(result);
         }
+
+        [HttpGet("{productId}")] //Route / the same as in parameters
+        //Detects a request with a parameter of an Id and returns the one product by its Id
+        public async Task<ActionResult<ServiceResponse<Product>>> GetProducts(int productId)
+        {
+            var result = await _productService.GetProductAsync(productId);
+            return Ok(result);
+        }
+
     }
 }
