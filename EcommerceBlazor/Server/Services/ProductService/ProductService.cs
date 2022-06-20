@@ -24,7 +24,7 @@
             }
             else
             {
-                //If all correct - set data to a product
+                //If all correct - set product as response Data
                 response.Data = product;
             }
 
