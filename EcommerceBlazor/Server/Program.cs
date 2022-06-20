@@ -2,6 +2,7 @@ global using EcommerceBlazor.Shared;
 global using Microsoft.EntityFrameworkCore;
 global using EcommerceBlazor.Server.Data;
 global using EcommerceBlazor.Server.Services.ProductService;
+global using EcommerceBlazor.Server.Services.CategoryService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +26,7 @@ builder.Services.AddSwaggerGen();
 //By placing it here I can change ProductService to any other Service I create
 //So the implementations of Interface methods will also change
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 var app = builder.Build();
 
