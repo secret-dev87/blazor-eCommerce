@@ -1,4 +1,5 @@
 ﻿@inject IProductService ProductService
+@implements IDisposable
 
 @if (ProductService.Products == null || ProductService.Products.Count == 0)
 {
@@ -30,8 +31,18 @@ else
 }
 
 @code {
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
-        await ProductService.GetProducts();
+
+        //After Invoking by GetProducts it subscribes an event
+        //to StateHasChanged which signalizes that the component
+        //Must be rerendered which triggers OnInitialized method
+        ProductService.ProductsChanged += StateHasChanged;
+    }
+
+    public void Dispose()
+    {
+        //undo the metho d above automatically
+        ProductService.ProductsChanged -= StateHasChanged;
     }
 }

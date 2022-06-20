@@ -14,6 +14,8 @@ namespace EcommerceBlazor.Client.Services.ProductService
 
         public List<Product> Products { get; set; } = new List<Product>();
 
+        public event Action ProductsChanged;
+
         //calls a controller and get a product by Id
         public async Task<ServiceResponse<Product>> GetProduct(int productId)
         {
@@ -22,12 +24,19 @@ namespace EcommerceBlazor.Client.Services.ProductService
             return result;
         }
 
-        public async Task GetProducts()
+        public async Task GetProducts(string? categoryUrl = null)
         {
-            var result =                               //same name as the name of a controller I try to access
-                await _http.GetFromJsonAsync<ServiceResponse<List<Product>>>("api/products"); //get call
+            //if no categoryUrl - all products, if url - category by its categoryUrl
+            var result =
+                categoryUrl == null ? 
+                await _http.GetFromJsonAsync<ServiceResponse<List<Product>>>("api/products") :
+                await _http.GetFromJsonAsync<ServiceResponse<List<Product>>>($"api/products/category/{categoryUrl}");                ; 
             if (result != null && result.Data != null)
                 Products = result.Data;
+
+            //After using GetProducts method in a component
+            //The event will subscribe to some other method
+            ProductsChanged.Invoke();
         }
     }
 }
