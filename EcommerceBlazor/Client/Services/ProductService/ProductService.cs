@@ -35,7 +35,7 @@ namespace EcommerceBlazor.Client.Services.ProductService
                 Products = result.Data;
 
             //After using GetProducts method in a component
-            //The event will subscribe to some other method
+            //The event will Invoke and subscribe to some other method
             ProductsChanged.Invoke();
         }
     }

@@ -12,8 +12,15 @@
         public async Task<ServiceResponse<Product>> GetProductAsync(int productId)
         {
             var response = new ServiceResponse<Product>();
-            //Look for product by Id, as a parameter, in a database
-            var product = await _context.Products.FindAsync(productId);
+
+            //adds variants and types to be seen on P_Details page
+            //and returns product by Id
+            var product = await _context.Products
+                .Include(p => p.Variants) //used to load variants
+                .ThenInclude(v => v.ProductType) //using variants it loads types of Products
+                .FirstOrDefaultAsync(p => p.Id == productId); //if first - returns product by given Id
+                                                             //if default - line 24
+
             if (product == null)
             {
                 //The reason to create SResponse was in
@@ -35,7 +42,8 @@
         {
             var response = new ServiceResponse<List<Product>>
             {
-                Data = await _context.Products.ToListAsync()
+                //only variants because I don't need types on Index page
+                Data = await _context.Products.Include(p => p.Variants).ToListAsync()
             };
 
             return response;
@@ -47,6 +55,8 @@
             {
                 Data = await _context.Products
                 .Where(p => p.Category.Url.ToLower().Equals(categoryUrl.ToLower()))
+                .Include(p => p.Variants) //adds only variants
+                                         //because I don't need types on category pages
                 .ToListAsync()
             };
 
