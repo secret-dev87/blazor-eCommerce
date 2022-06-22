@@ -63,20 +63,65 @@
             return response;
         }
 
-        //Search by Title and Discription
+        //Search
         public async Task<ServiceResponse<List<Product>>> SearchProducts(string searchText)
         {
             var response = new ServiceResponse<List<Product>>
             {
-                Data = await _context.Products
-                .Where(p => p.Title.ToLower().Contains(searchText.ToLower())
-                ||
-                p.Description.ToLower().Contains(searchText.ToLower()))
-                .Include(p => p.Variants)
-                .ToListAsync()
+                Data = await FindProductsBySearchText(searchText)
             };
 
             return response;
+        }
+
+        //Filtered search Method by Title and Description
+        private async Task<List<Product>> FindProductsBySearchText(string searchText)
+        {
+            return await _context.Products
+                            .Where(p => p.Title.ToLower().Contains(searchText.ToLower())
+                            ||
+                            p.Description.ToLower().Contains(searchText.ToLower()))
+                            .Include(p => p.Variants)
+                            .ToListAsync();
+        }
+
+        public async Task<ServiceResponse<List<string>>> GetProductSearchSuggestions(string searchText)
+        {
+            var products = await FindProductsBySearchText(searchText);
+
+            List<string> result = new List<string>();
+
+            foreach (var product in products)
+            {
+                                                      //same as lowercase everything manually
+                if(product.Title.Contains(searchText, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.Add(product.Title);
+                }
+
+                if(product.Description != null)
+                {
+                    //filter all punctuation
+                    var punctuation = product.Description.Where(char.IsPunctuation)
+                        .Distinct().ToArray();
+                    //split discription into separate words and delete punctuation
+                    var words = product.Description.Split()
+                        .Select(s => s.Trim(punctuation));
+
+                    foreach (var word in words)
+                    {
+                        //adds a word to a list if it contains a searchText and
+                        //is not in a list already
+                        if(word.Contains(searchText, StringComparison.OrdinalIgnoreCase)
+                            && !result.Contains(word))
+                        {
+                            result.Add(word);
+                        }
+                    }
+                }
+            }
+
+            return new ServiceResponse<List<string>> { Data = result };
         }
     }
 }

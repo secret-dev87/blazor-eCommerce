@@ -23,6 +23,7 @@ namespace EcommerceBlazor.Server.Controllers
         [HttpGet] //All products
         public async Task<ActionResult<ServiceResponse<List<Product>>>> GetProducts()
         {
+                                               //func from ProductService
             var result = await _productService.GetProductsAsync();
             return Ok(result);
         }
@@ -45,6 +46,13 @@ namespace EcommerceBlazor.Server.Controllers
         public async Task<ActionResult<ServiceResponse<Product>>> SearchProducts(string searchText)
         {
             var result = await _productService.SearchProducts(searchText);
+            return Ok(result);
+        }
+        
+        [HttpGet("searchsuggestion/{searchText}")] //Search Suggestions
+        public async Task<ActionResult<ServiceResponse<Product>>> GetProductSearchSuggestions(string searchText)
+        {
+            var result = await _productService.GetProductSearchSuggestions(searchText);
             return Ok(result);
         }
 
