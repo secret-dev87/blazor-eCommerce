@@ -42,16 +42,17 @@ namespace EcommerceBlazor.Client.Services.ProductService
 
         public async Task<List<string>> GetProductSearchSuggestions(string searchText)
         {
-            var result =
-                await _http.GetFromJsonAsync<ServiceResponse<List<string>>>($"api/products/searchsuggestions/{searchText}");
+            var result = await _http
+                .GetFromJsonAsync<ServiceResponse<List<string>>>($"api/products/searchsuggestions/{searchText}");
             return result.Data;
         }
 
         public async Task SearchProducts(string searchText)
         {
-            var result =
-                await _http.GetFromJsonAsync<ServiceResponse<List<Product>>>($"api/products/search/{searchText}");
-            if (result != null && result.Data != null) Products = result.Data;
+            var result = await _http
+                 .GetFromJsonAsync<ServiceResponse<List<Product>>>($"api/products/search/{searchText}");
+            if (result != null && result.Data != null)
+                Products = result.Data;
             if (Products.Count == 0) Message = "No products found.";
             ProductsChanged?.Invoke();
         }
