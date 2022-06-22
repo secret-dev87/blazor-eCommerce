@@ -14,33 +14,37 @@ namespace EcommerceBlazor.Server.Controllers
         //by Injecting IProductService here I call a service
         //which I've added in Program.cs file and it uses exactly ProductService service
         //which may be replaced there by any other newly created service.
-        //so in fact Interfaces allow to do DI convinient
+        //so in fact Interfaces allow to do DI convenient
         public ProductsController(IProductService productService)
         {
             _productService = productService;
         }
 
-        [HttpGet]
-        //detects a request and returns data by using Ok method
+        [HttpGet] //All products
         public async Task<ActionResult<ServiceResponse<List<Product>>>> GetProducts()
         {
-            //because of DI, here ProductService solution is used, not Interface's one
             var result = await _productService.GetProductsAsync();
             return Ok(result);
         }
 
-        [HttpGet("{productId}")] //Route / the same as in parameters
-        //Detects a request with an Id as a parameter and returns the one product by its Id
+        [HttpGet("{productId}")] //Product Details
         public async Task<ActionResult<ServiceResponse<Product>>> GetProducts(int productId)
         {
             var result = await _productService.GetProductAsync(productId);
             return Ok(result);
         }
 
-        [HttpGet("category/{categoryUrl}")]
+        [HttpGet("category/{categoryUrl}")] //Category
         public async Task<ActionResult<ServiceResponse<Product>>> GetProductsByCategory(string categoryUrl)
         {
             var result = await _productService.GetProductsByCategory(categoryUrl);
+            return Ok(result);
+        }
+
+        [HttpGet("search/{searchText}")] //Search
+        public async Task<ActionResult<ServiceResponse<Product>>> SearchProducts(string searchText)
+        {
+            var result = await _productService.SearchProducts(searchText);
             return Ok(result);
         }
 
