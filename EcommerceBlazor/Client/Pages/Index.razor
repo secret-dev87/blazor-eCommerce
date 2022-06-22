@@ -1,4 +1,5 @@
 ﻿@page "/"
+@page "/search/{searchText}"
 @page "/{categoryUrl}"
 @inject IProductService ProductService
 
@@ -11,11 +12,22 @@
 	[Parameter]
 	public string? CategoryUrl { get; set; } = null;
 
-	//If client press any category button it adds
+	[Parameter]
+	public string? SearchText { get; set; } = null;
+
+	//If client makes any changes on the page it adds
 	//Url as a parameter and makes a call
 	protected override async Task OnParametersSetAsync()
 	{
-		//GetProducts Invoke an event and effect ProductList->
-		await ProductService.GetProducts(CategoryUrl);
+		if(SearchText != null)
+		{
+			await ProductService.SearchProducts(SearchText);
+		}
+		else
+		{
+			//GetProducts Invoke an event and effect ProductList->
+			await ProductService.GetProducts(CategoryUrl);
+		}
+		
 	}
 }
