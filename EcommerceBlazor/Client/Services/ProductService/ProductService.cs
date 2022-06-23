@@ -30,7 +30,7 @@ namespace EcommerceBlazor.Client.Services.ProductService
             //if no categoryUrl - all products, if url - category by its categoryUrl
             var result =
                 categoryUrl == null ? 
-                await _http.GetFromJsonAsync<ServiceResponse<List<Product>>>("api/products") :
+                await _http.GetFromJsonAsync<ServiceResponse<List<Product>>>("api/products/featured") :
                 await _http.GetFromJsonAsync<ServiceResponse<List<Product>>>($"api/products/category/{categoryUrl}");                ; 
             if (result != null && result.Data != null)
                 Products = result.Data;
