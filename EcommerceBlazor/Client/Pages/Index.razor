@@ -1,5 +1,5 @@
 ﻿@page "/"
-@page "/search/{searchText}"
+@page "/search/{searchText}/{page:int}"
 @page "/{categoryUrl}"
 @inject IProductService ProductService
 
@@ -8,7 +8,6 @@
 @if(SearchText == null && CategoryUrl == null)
 {
 	<FeaturedProducts />
-	<ProductList />
 }
 else
 {
@@ -23,6 +22,9 @@ else
 	[Parameter]
 	public string? SearchText { get; set; } = null;
 
+	[Parameter]
+	public int Page { get; set; } = 1;
+
 	//If client makes any changes on the page it adds
 	//Url as a parameter and makes a call
 	protected override async Task OnParametersSetAsync()
@@ -30,7 +32,7 @@ else
 		if(SearchText != null)
 		{
 			//SearchProducts Invokes an event and affect Search component
-			await ProductService.SearchProducts(SearchText);
+			await ProductService.SearchProducts(SearchText, Page);
 		}
 		else
 		{

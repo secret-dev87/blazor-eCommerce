@@ -241,6 +241,11 @@ main[b-lblflcqk8o] {
     text-align: center;
 }
 
+.page-selection[b-6ca97eypqo] {
+    margin-right: 15px;
+    margin-bottom: 30px;
+}
+
 @media (max-width: 1023.98px) {
     .media[b-6ca97eypqo] {
         flex-direction: column;
