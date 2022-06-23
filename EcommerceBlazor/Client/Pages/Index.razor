@@ -3,10 +3,17 @@
 @page "/{categoryUrl}"
 @inject IProductService ProductService
 
-<PageTitle>My Shop</PageTitle>
+<PageTitle>Emporium</PageTitle>
 
+@if(SearchText == null && CategoryUrl == null)
+{
+	<FeaturedProducts />
+}
+else
+{
+	<ProductList />
+}
 
-<ProductList />
 
 @code {
 	[Parameter]
