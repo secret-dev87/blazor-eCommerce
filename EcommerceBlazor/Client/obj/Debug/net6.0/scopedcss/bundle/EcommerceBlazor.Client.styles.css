@@ -31,6 +31,12 @@
         margin-right: auto;
     }
 }
+/* /Shared/HomeButton.razor.rz.scp.css */
+.home-button[b-1jh4eu8lx6] {
+    white-space: nowrap;
+    margin-right: 10px;
+    transform: rotate(-3deg);
+}
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-lblflcqk8o] {
     position: relative;
