@@ -43,11 +43,13 @@
 
     public async Task HandleSearch(KeyboardEventArgs args)
     {
+        //if buttons aren't pressed or Enter pressed - search
         if (args.Key == null || args.Key.Equals("Enter"))
         {
             SearchProducts();
         }
-        else if (searchText.Length > 1)
+
+        else if (searchText.Length > 2)
         {
             suggestions = await ProductService.GetProductSearchSuggestions(searchText);
         }

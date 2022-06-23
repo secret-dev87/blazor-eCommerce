@@ -12,9 +12,7 @@ namespace EcommerceBlazor.Client.Services.ProductService
         //The code will look way cleaner
         List<Product> Products { get; set; }
         string Message { get; set; }
-
-        //if no Url - all products
-        Task GetProducts(string? categoryUrl = null);
+        Task GetProducts(string? categoryUrl = null); //if no Url - all products
         Task<ServiceResponse<Product>> GetProduct(int productId);
         Task SearchProducts(string searchText);
         Task<List<string>> GetProductSearchSuggestions(string searchText);

@@ -21,11 +21,12 @@
 	{
 		if(SearchText != null)
 		{
+			//SearchProducts Invokes an event and affect Search component
 			await ProductService.SearchProducts(SearchText);
 		}
 		else
 		{
-			//GetProducts Invoke an event and effect ProductList->
+			//GetProducts Invoke an event and affect ProductList component
 			await ProductService.GetProducts(CategoryUrl);
 		}
 		

@@ -17,7 +17,7 @@
             //and returns product by Id
             var product = await _context.Products
                 .Include(p => p.Variants) //used to load variants
-                .ThenInclude(v => v.ProductType) //using variants it loads types of Products
+                .ThenInclude(v => v.ProductType) //using variants it loads types
                 .FirstOrDefaultAsync(p => p.Id == productId); //if first - returns product by given Id
                                                              //if default - line 24
 
@@ -56,8 +56,18 @@
                 Data = await _context.Products
                 .Where(p => p.Category.Url.ToLower().Equals(categoryUrl.ToLower()))
                 .Include(p => p.Variants) //adds only variants
-                                         //because I don't need types on category pages
+                                         //because I don't need types on category page
                 .ToListAsync()
+            };
+
+            return response;
+        }
+
+        public async Task<ServiceResponse<List<Product>>> SearchProducts(string searchText)
+        {
+            var response = new ServiceResponse<List<Product>>
+            {
+                Data = await FindProductsBySearchText(searchText)
             };
 
             return response;
@@ -71,15 +81,22 @@
 
             foreach (var product in products)
             {
+                                                       //same as lowercase everything manually
                 if (product.Title.Contains(searchText, StringComparison.OrdinalIgnoreCase))
                 {
+                    //Adds title to the list if Title contains searchText
                     result.Add(product.Title);
                 }
 
                 if (product.Description != null)
                 {
+                        //take out all punctuation from the list of products
+                        //and place it into an array
                     var punctuation = product.Description.Where(char.IsPunctuation)
                         .Distinct().ToArray();
+                        //split all words from the list into separate
+                        //"list" of words (using Select) and
+                        //delete punctuation (from the array created above)
                     var words = product.Description.Split()
                         .Select(s => s.Trim(punctuation));
 
@@ -97,16 +114,8 @@
             return new ServiceResponse<List<string>> { Data = result };
         }
 
-        public async Task<ServiceResponse<List<Product>>> SearchProducts(string searchText)
-        {
-            var response = new ServiceResponse<List<Product>>
-            {
-                Data = await FindProductsBySearchText(searchText)
-            };
 
-            return response;
-        }
-
+        //Filter to search through Titles and Descriptions by given searchText
         private async Task<List<Product>> FindProductsBySearchText(string searchText)
         {
             return await _context.Products
