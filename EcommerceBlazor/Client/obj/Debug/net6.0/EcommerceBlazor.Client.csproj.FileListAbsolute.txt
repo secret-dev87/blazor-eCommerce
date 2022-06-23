@@ -1647,3 +1647,5 @@ D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\re
 D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\EcommerceBlazor.Client.pdb
 D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\ref\EcommerceBlazor.Client.dll
 D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\scopedcss\Pages\ProductDetails.razor.rz.scp.css
+D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\scopedcss\Shared\ShopLayout.razor.rz.scp.css
+D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\scopedcss\Shared\ShopNavMenu.razor.rz.scp.css
