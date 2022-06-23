@@ -12,9 +12,12 @@ namespace EcommerceBlazor.Client.Services.ProductService
         //The code will look way cleaner
         List<Product> Products { get; set; }
         string Message { get; set; }
-        Task GetProducts(string? categoryUrl = null); //if no Url - all products
+		int CurrentPage { get; set; }
+		int PageCount { get; set; }
+        string LastSearchText { get; set; } //when switch pages we access same search request
+		Task GetProducts(string? categoryUrl = null); //if no Url - all products
         Task<ServiceResponse<Product>> GetProduct(int productId);
-        Task SearchProducts(string searchText);
+        Task SearchProducts(string searchText, int page);
         Task<List<string>> GetProductSearchSuggestions(string searchText);
     }
 }

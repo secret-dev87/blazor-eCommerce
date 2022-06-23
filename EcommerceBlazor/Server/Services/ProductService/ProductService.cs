@@ -63,11 +63,33 @@
             return response;
         }
 
-        public async Task<ServiceResponse<List<Product>>> SearchProducts(string searchText)
+        public async Task<ServiceResponse<ProductSearchResult>> SearchProducts(string searchText, int page)
         {
-            var response = new ServiceResponse<List<Product>>
+
+            var pageResults = 2f; //num of results per page
+            //calc number of pages according to pageResults
+            var pageCount = Math.Ceiling((await FindProductsBySearchText(searchText)).Count / pageResults);
+            //filter results to pages
+            var products = await _context.Products
+                                .Where(p => p.Title.ToLower().Contains(searchText.ToLower())
+                                ||
+                                p.Description.ToLower().Contains(searchText.ToLower()))
+                                .Include(p => p.Variants)
+                                //E.g if I try to access page 3 I skip first 4 products
+                                //((3 - 1)*2=4) and Take 2 next products and list them
+                                //So in the end I get filtered page 3
+                                .Skip((page - 1) * (int)pageResults)
+                                .Take((int)pageResults)
+                                .ToListAsync();
+
+            var response = new ServiceResponse<ProductSearchResult>
             {
-                Data = await FindProductsBySearchText(searchText)
+                Data = new ProductSearchResult
+                {
+                    Products = products,
+                    CurrentPage = page,
+                    Pages = (int)pageCount
+				}
             };
 
             return response;
@@ -114,6 +136,18 @@
             return new ServiceResponse<List<string>> { Data = result };
         }
 
+        public async Task<ServiceResponse<List<Product>>> GetFeaturedProducts()
+        {
+            var response = new ServiceResponse<List<Product>>
+            {
+                Data = await _context.Products
+                .Where(p => p.Featured)
+                .Include(p => p.Variants)
+                .ToListAsync()
+            };
+
+            return response;
+        }
 
         //Filter to search through Titles and Descriptions by given searchText
         private async Task<List<Product>> FindProductsBySearchText(string searchText)
@@ -125,18 +159,5 @@
                                 .Include(p => p.Variants)
                                 .ToListAsync();
         }
-
-		public async Task<ServiceResponse<List<Product>>> GetFeaturedProducts()
-		{
-            var response = new ServiceResponse<List<Product>>
-            {
-                Data = await _context.Products
-                .Where(p => p.Featured)
-                .Include(p => p.Variants)
-                .ToListAsync()
-            };
-
-            return response;
-		}
 	}
 }
