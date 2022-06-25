@@ -1655,3 +1655,4 @@ D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\bin\Debug\net6.0\ww
 D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll.gz
 D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\bin\Debug\net6.0\Blazored.LocalStorage.dll
 D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\build-gz\l5+ts29F.gz
+D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\scopedcss\Pages\Cart.razor.rz.scp.css

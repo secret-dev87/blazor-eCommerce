@@ -15,7 +15,7 @@
                 Data = new List<CartProductResponse>()
             };
 
-
+            //collect data for every cart product
             foreach (var item in cartItems)
             {
                 //for each item in a cart get product with given Id
@@ -25,10 +25,10 @@
 
                 if (product == null)
                 {
-                    continue;
+                    continue; //skips current iteration 
                 }
 
-                //same for every pVariant including pType
+                //same for every pVariant and include pType
                 var productVariant = await _context.ProductVariants
                     .Where(v => v.ProductId == item.ProductId
                         && v.ProductTypeId == item.ProductTypeId)
@@ -37,7 +37,7 @@
 
                 if (productVariant == null)
                 {
-                    continue;
+                    continue; //skips current iteration 
                 }
 
                 //create cart product 
