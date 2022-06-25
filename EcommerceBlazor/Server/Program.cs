@@ -3,6 +3,7 @@ global using Microsoft.EntityFrameworkCore;
 global using EcommerceBlazor.Server.Data;
 global using EcommerceBlazor.Server.Services.ProductService;
 global using EcommerceBlazor.Server.Services.CategoryService;
+global using EcommerceBlazor.Server.Services.CartService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,7 +28,7 @@ builder.Services.AddSwaggerGen();
 //So the implementations of Interface methods will also change
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
-//builder.Services.AddScoped<ICartService, CartService>();
+builder.Services.AddScoped<ICartService, CartService>();
 
 var app = builder.Build();
 
