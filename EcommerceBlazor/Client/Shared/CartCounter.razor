@@ -16,6 +16,8 @@
 
 	protected override void OnInitialized()
 	{
+		//removing, adding or getting products from cart
+		//in components Invoke this event
 		CartService.OnChange += StateHasChanged;
 	}
 

@@ -34,6 +34,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/c\#/EcommerceBlazor/BlazorEcommerce/EcommerceBlazor/Client/Pages/Register.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/c\#/EcommerceBlazor/BlazorEcommerce/EcommerceBlazor/Client/Shared/CartCounter.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENhcnRDb3VudGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -85,3 +89,7 @@ build_metadata.AdditionalFiles.CssScope = b-umihedbt39
 [D:/c\#/EcommerceBlazor/BlazorEcommerce/EcommerceBlazor/Client/Shared/ShopNavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFNob3BOYXZNZW51LnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-hlcbl7qutb
+
+[D:/c\#/EcommerceBlazor/BlazorEcommerce/EcommerceBlazor/Client/Shared/UserButton.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFVzZXJCdXR0b24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-d2dek0fkgc
