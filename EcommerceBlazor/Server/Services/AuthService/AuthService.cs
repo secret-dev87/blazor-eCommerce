@@ -34,7 +34,7 @@ namespace EcommerceBlazor.Server.Services.AuthService
             //save changes in Db
             await _context.SaveChangesAsync();
 
-            return new ServiceResponse<int> { Data = user.Id };
+            return new ServiceResponse<int> { Data = user.Id, Message = "Registration successful!" };
         }
 
         //checks if user exists 
