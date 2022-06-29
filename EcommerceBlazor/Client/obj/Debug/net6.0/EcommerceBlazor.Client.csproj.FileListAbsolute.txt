@@ -1432,12 +1432,9 @@ D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\Ec
 D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\EcommerceBlazor.Client.AssemblyInfo.cs
 D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\EcommerceBlazor.Client.csproj.CoreCompileInputs.cache
 D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\EcommerceBlazor.Client.MvcApplicationPartsAssemblyInfo.cache
-D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\build-gz\sAg26hWu.gz
-D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\build-gz\rDB1okTz.gz
 D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\build-gz\bl6DvIix.gz
 D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\build-gz\GW2ud1Fq.gz
 D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\build-gz\wkTd3bqh.gz
-D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\build-gz\K9gHi2w0.gz
 D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\build-gz\UqHrq9iB.gz
 D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\build-gz\H87BtB5q.gz
 D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\build-gz\AipkvyQN.gz
@@ -1657,3 +1654,10 @@ D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\bin\Debug\net6.0\Bl
 D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\build-gz\l5+ts29F.gz
 D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\scopedcss\Pages\Cart.razor.rz.scp.css
 D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\scopedcss\Shared\UserButton.razor.rz.scp.css
+D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll
+D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll.gz
+D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Authorization.dll
+D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\build-gz\bIh3kd3m.gz
+D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\build-gz\AvbQRZgP.gz
+D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\build-gz\gvxytwA3.gz
+D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\build-gz\qpLNQQuG.gz
