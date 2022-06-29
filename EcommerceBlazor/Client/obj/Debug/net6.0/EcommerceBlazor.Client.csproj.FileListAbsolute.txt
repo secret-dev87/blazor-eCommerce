@@ -1661,3 +1661,11 @@ D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\bu
 D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\build-gz\AvbQRZgP.gz
 D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\build-gz\gvxytwA3.gz
 D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\build-gz\qpLNQQuG.gz
+D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.WebUtilities.dll
+D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Net.Http.Headers.dll
+D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.WebUtilities.dll.gz
+D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Net.Http.Headers.dll.gz
+D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\bin\Debug\net6.0\Microsoft.AspNetCore.WebUtilities.dll
+D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\bin\Debug\net6.0\Microsoft.Net.Http.Headers.dll
+D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\build-gz\BoXggb5c.gz
+D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\build-gz\L6HwwYzh.gz
