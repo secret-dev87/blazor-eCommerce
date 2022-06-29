@@ -171,3 +171,4 @@ D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Server\obj\Debug\net6.0\Ec
 D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Server\obj\Debug\net6.0\EcommerceBlazor.Server.genruntimeconfig.cache
 D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Server\obj\Debug\net6.0\ref\EcommerceBlazor.Server.dll
 D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Server\bin\Debug\net6.0\Blazored.LocalStorage.dll
+D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Server\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Authorization.dll
