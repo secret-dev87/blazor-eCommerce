@@ -4,6 +4,7 @@
 @inject ILocalStorageService LocalStorage
 @inject NavigationManager NavigationManager
 @inject AuthenticationStateProvider AuthenticationStateProvider	
+@inject ICartService CartService	 
 
 <PageTitle>Login</PageTitle>
 <h3>Login</h3>
@@ -48,13 +49,14 @@
 		//if user is loged in localStorage creates an authToken
 		//which is later taken by GetAuthStateAsync() and it notifies
 		//other components whether user is authorized or not
-		//if authorized - navigate to returnUrl
+		//if authenticated - navigate to returnUrl
 		if (result.Success)
 		{
 			errorMessage = string.Empty;
 
 			await LocalStorage.SetItemAsync("authToken", result.Data);
 			await AuthenticationStateProvider.GetAuthenticationStateAsync();
+			await CartService.StoreCartItems(true);
 			NavigationManager.NavigateTo(returnUrl);
 		}
 		else
