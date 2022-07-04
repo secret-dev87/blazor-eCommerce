@@ -30,7 +30,7 @@ namespace EcommerceBlazor.Client.Services.ProductService
 
         public async Task GetProducts(string? categoryUrl = null)
         {
-            //if no categoryUrl - all products, if url - category by its categoryUrl
+            //if no categoryUrl - featured products, if url - category by its categoryUrl
             var result =
                 categoryUrl == null ? 
                 await _http.GetFromJsonAsync<ServiceResponse<List<Product>>>("api/products/featured") :
