@@ -120,13 +120,13 @@ namespace EcommerceBlazor.Client.Services.CartService
         //CartItems from the localStorage
         public async Task StoreCartItems(bool emptyLocalCart = false)
         {
-            var localCard = await _localStorage.GetItemAsync<List<CartItem>>("cart");
-            if (localCard == null)
+            var localCart = await _localStorage.GetItemAsync<List<CartItem>>("cart");
+            if (localCart == null)
             {
                 return;
             }
 
-            await _http.PostAsJsonAsync("api/cart", localCard);
+            await _http.PostAsJsonAsync("api/cart", localCart);
 
             if (emptyLocalCart)
             {

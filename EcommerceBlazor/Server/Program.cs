@@ -5,8 +5,10 @@ global using EcommerceBlazor.Server.Services.ProductService;
 global using EcommerceBlazor.Server.Services.CategoryService;
 global using EcommerceBlazor.Server.Services.CartService;
 global using EcommerceBlazor.Server.Services.AuthService;
+global using EcommerceBlazor.Server.Services.OrderService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,6 +35,8 @@ builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ICartService, CartService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IOrderService, OrderService>();
+
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
