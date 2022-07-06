@@ -22,8 +22,7 @@ namespace EcommerceBlazor.Server.Controllers
             return Ok(result);
         }
 
-        [HttpPost] //Default post call of the controller
-        //Stores cartitems for Auth users
+        [HttpPost]
         public async Task<ActionResult<ServiceResponse<List<CartProductResponse>>>> StoreCartItems(List<CartItem> cartItems)
         {
             var result = await _cartService.StoreCartItems(cartItems);
@@ -57,7 +56,7 @@ namespace EcommerceBlazor.Server.Controllers
             return await _cartService.GetCartItemsCount();
         }
 
-        [HttpGet] //default get
+        [HttpGet]
         public async Task<ActionResult<ServiceResponse<List<CartProductResponse>>>> GetDbCartProducts()
         {
             var result = await _cartService.GetDbCartProducts();

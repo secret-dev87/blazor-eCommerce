@@ -1669,3 +1669,5 @@ D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\bin\Debug\net6.0\Mi
 D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\bin\Debug\net6.0\Microsoft.Net.Http.Headers.dll
 D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\build-gz\BoXggb5c.gz
 D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\build-gz\L6HwwYzh.gz
+D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\scopedcss\Pages\Orders.razor.rz.scp.css
+D:\c#\EcommerceBlazor\BlazorEcommerce\EcommerceBlazor\Client\obj\Debug\net6.0\scopedcss\Pages\OrderDetails.razor.rz.scp.css
