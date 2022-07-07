@@ -149,5 +149,8 @@ namespace EcommerceBlazor.Server.Services.AuthService
 
         public int GetUserId() =>
             int.Parse(_httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier));
+        public string GetUserEmail() =>
+            _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.Name);
+
     }
 }
