@@ -22,6 +22,53 @@ namespace EcommerceBlazor.Server.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("EcommerceBlazor.Shared.Address", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Country")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("State")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Street")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Zip")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("Addresses");
+                });
+
             modelBuilder.Entity("EcommerceBlazor.Shared.CartItem", b =>
                 {
                     b.Property<int>("UserId")
@@ -491,6 +538,15 @@ namespace EcommerceBlazor.Server.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("EcommerceBlazor.Shared.Address", b =>
+                {
+                    b.HasOne("EcommerceBlazor.Shared.User", null)
+                        .WithOne("Address")
+                        .HasForeignKey("EcommerceBlazor.Shared.Address", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("EcommerceBlazor.Shared.OrderItem", b =>
                 {
                     b.HasOne("EcommerceBlazor.Shared.Order", "Order")
@@ -556,6 +612,12 @@ namespace EcommerceBlazor.Server.Migrations
             modelBuilder.Entity("EcommerceBlazor.Shared.Product", b =>
                 {
                     b.Navigation("Variants");
+                });
+
+            modelBuilder.Entity("EcommerceBlazor.Shared.User", b =>
+                {
+                    b.Navigation("Address")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
