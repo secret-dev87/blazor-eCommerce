@@ -9,6 +9,8 @@ namespace EcommerceBlazor.Server.Services.PaymentService
         private readonly IAuthService _authService;
         private readonly IOrderService _orderService;
 
+        const string secret = "whsec_858c914a14fba3ed9b14ec1d9bb188a4ee8865e31ffe4c1d5352512da726ea18";
+
         public PaymentService(ICartService cartService, IAuthService authService, IOrderService orderService)
         {
             StripeConfiguration.ApiKey = "sk_test_51LIyo9LYmNBx8CcYZl7Ved0koApcglpmvcZpI5MxSzI93fDfmbGVlyhgXEWxN6MpoPnkalKOCfMk2lyHd7rKtycP001TP6hgrx";
@@ -46,7 +48,7 @@ namespace EcommerceBlazor.Server.Services.PaymentService
                 CustomerEmail = _authService.GetUserEmail(),
                 PaymentMethodTypes = new List<string>
                 {
-                    "card" //googlepay & applepay
+                    "card"
                 },
                 LineItems = lineItems,
                 Mode = "payment",
@@ -58,6 +60,32 @@ namespace EcommerceBlazor.Server.Services.PaymentService
             //create session
             Session session = service.Create(options);
             return session;
+        }
+
+        public async Task<ServiceResponse<bool>> FulfillOrder(HttpRequest request)
+        {
+            var json = await new StreamReader(request.Body).ReadToEndAsync();
+            try 
+            {
+                var stripeEvent = EventUtility.ConstructEvent(
+                        json,
+                        request.Headers["Stripe-Signature"],
+                        secret
+                    );
+
+                if(stripeEvent.Type == Events.CheckoutSessionCompleted)
+                {
+                    var session = stripeEvent.Data.Object as Session;
+                    var user = await _authService.GetUserByEmail(session.CustomerEmail);
+                    await _orderService.PlaceOrder(user.Id);
+                }
+
+                return new ServiceResponse<bool> { Data = true };
+            } 
+            catch (StripeException e)
+            {
+                return new ServiceResponse<bool> { Data = false, Success = false, Message = e.Message };
+            }
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EcommerceBlazor.Server.Controllers
@@ -12,13 +12,6 @@ namespace EcommerceBlazor.Server.Controllers
         public OrderController(IOrderService orderService)
         {
             _orderService = orderService;
-        }
-
-        [HttpPost]
-        public async Task<ActionResult<ServiceResponse<bool>>> PlaceOrder()
-        {
-            var result = await _orderService.PlaceOrder();
-            return Ok(result);
         }
 
         [HttpGet]
