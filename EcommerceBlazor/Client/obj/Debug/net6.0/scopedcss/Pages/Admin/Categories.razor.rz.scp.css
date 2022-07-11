@@ -1,0 +1,21 @@
+.header[b-8e1hcq7ze7] {
+    display: flex;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+}
+
+.row[b-8e1hcq7ze7] {
+    display: flex;
+    padding: 6px;
+}
+
+.col[b-8e1hcq7ze7] {
+    flex: 1;
+}
+
+.col-visible[b-8e1hcq7ze7] {
+    text-align: center;
+}

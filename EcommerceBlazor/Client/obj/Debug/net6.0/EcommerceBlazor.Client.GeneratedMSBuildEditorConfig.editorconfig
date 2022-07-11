@@ -22,10 +22,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/c\#/EcommerceBlazor/BlazorEcommerce/EcommerceBlazor/Client/Pages/Admin/Categories.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ2F0ZWdvcmllcy5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/c\#/EcommerceBlazor/BlazorEcommerce/EcommerceBlazor/Client/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -73,6 +69,10 @@ build_metadata.AdditionalFiles.CssScope =
 [D:/c\#/EcommerceBlazor/BlazorEcommerce/EcommerceBlazor/Client/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/EcommerceBlazor/BlazorEcommerce/EcommerceBlazor/Client/Pages/Admin/Categories.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ2F0ZWdvcmllcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-8e1hcq7ze7
 
 [D:/c\#/EcommerceBlazor/BlazorEcommerce/EcommerceBlazor/Client/Pages/Cart.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydC5yYXpvcg==

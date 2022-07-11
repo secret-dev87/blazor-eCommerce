@@ -96,6 +96,9 @@ namespace EcommerceBlazor.Server.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -103,6 +106,9 @@ namespace EcommerceBlazor.Server.Migrations
                     b.Property<string>("Url")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Visible")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 
@@ -112,20 +118,26 @@ namespace EcommerceBlazor.Server.Migrations
                         new
                         {
                             Id = 1,
+                            Deleted = false,
                             Name = "TV Shows",
-                            Url = "tv-shows"
+                            Url = "tv-shows",
+                            Visible = true
                         },
                         new
                         {
                             Id = 2,
+                            Deleted = false,
                             Name = "Books",
-                            Url = "books"
+                            Url = "books",
+                            Visible = true
                         },
                         new
                         {
                             Id = 3,
+                            Deleted = false,
                             Name = "Video Games",
-                            Url = "video-games"
+                            Url = "video-games",
+                            Visible = true
                         });
                 });
 
