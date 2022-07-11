@@ -130,6 +130,14 @@
         margin-right: auto;
     }
 }
+/* /Shared/AdminMenu.razor.rz.scp.css */
+.top-row a[b-z9sf39q7a6] {
+    margin-left: 0!important;
+}
+
+.dropdown-item:hover[b-z9sf39q7a6] {
+    background-color: white;
+}
 /* /Shared/FeaturedProducts.razor.rz.scp.css */
 .container[b-7dvebpj7gk] {
     display: flex;
