@@ -20,6 +20,15 @@
 .col-visible[b-8e1hcq7ze7] {
     text-align: center;
 }
+/* /Pages/Admin/ProductTypes.razor.rz.scp.css */
+.row[b-4qabukv67r] {
+    display: flex;
+    padding: 6px;
+}
+
+.col[b-4qabukv67r] {
+    flex: 1;
+}
 /* /Pages/Cart.razor.rz.scp.css */
 .container[b-19rguudtz8] {
     display: flex;
