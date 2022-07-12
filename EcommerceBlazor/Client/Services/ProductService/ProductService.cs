@@ -17,8 +17,34 @@ namespace EcommerceBlazor.Client.Services.ProductService
         public int CurrentPage { get; set; } = 1;
         public int PageCount { get; set; } = 0;
         public string LastSearchText { get; set; } = string.Empty;
+        public List<Product> AdminProducts { get; set; }
 
-		public event Action ProductsChanged;
+        public event Action ProductsChanged;
+
+        public async Task<Product> CreateProduct(Product product)
+        {
+            var result = await _http.PostAsJsonAsync("api/products", product);
+            var newProduct =
+                (await result.Content.ReadFromJsonAsync<ServiceResponse<Product>>()).Data;
+            return newProduct;
+        }
+
+        public async Task DeleteProduct(Product product)
+        {
+            var result = await _http.DeleteAsync($"api/products/{product.Id}");
+        }
+
+        public async Task GetAdminProduct()
+        {
+            var result = await _http.GetFromJsonAsync<ServiceResponse<List<Product>>>("api/products/admin");
+            AdminProducts = result.Data;
+            CurrentPage = 1;
+            PageCount = 0;
+            if(AdminProducts.Count == 0)
+            {
+                Message = "No products found.";
+            }
+        }
 
         //calls a controller and get a product by Id
         public async Task<ServiceResponse<Product>> GetProduct(int productId)
@@ -69,6 +95,12 @@ namespace EcommerceBlazor.Client.Services.ProductService
             }
             if (Products.Count == 0) Message = "No products found.";
             ProductsChanged?.Invoke();
+        }
+
+        public async Task<Product> UpdateProduct(Product product)
+        {
+            var result = await _http.PutAsJsonAsync($"api/products", product);
+            return (await result.Content.ReadFromJsonAsync<ServiceResponse<Product>>()).Data;
         }
     }
 }
