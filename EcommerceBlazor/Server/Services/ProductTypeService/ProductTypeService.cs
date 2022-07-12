@@ -11,6 +11,7 @@
 
         public async Task<ServiceResponse<List<ProductType>>> AddProductType(ProductType productType)
         {
+            productType.Editing = productType.IsNew = false;
             _context.ProductTypes.Add(productType);
             await _context.SaveChangesAsync();
 
@@ -26,7 +27,7 @@
         public async Task<ServiceResponse<List<ProductType>>> UpdateProductType(ProductType productType)
         {
             var dbProductType = await _context.ProductTypes.FindAsync(productType.Id);
-            if(dbProductType == null)
+            if (dbProductType == null)
             {
                 return new ServiceResponse<List<ProductType>>
                 {

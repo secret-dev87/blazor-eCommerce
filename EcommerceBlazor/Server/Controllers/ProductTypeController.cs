@@ -36,6 +36,5 @@ namespace EcommerceBlazor.Server.Controllers
             var response = await _productTypeService.UpdateProductType(productType);
             return Ok(response);
         }
-
     }
 }

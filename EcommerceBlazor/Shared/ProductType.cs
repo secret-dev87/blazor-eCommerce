@@ -11,6 +11,7 @@ namespace EcommerceBlazor.Shared
     {
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
+        public bool Deleted { get; set; } = false;
         [NotMapped] //not visible as a column in DB
         public bool Editing { get; set; } = false;
         [NotMapped] //only for the form
