@@ -6,14 +6,13 @@ namespace EcommerceBlazor.Client.Services.ProductService
     {
         private readonly HttpClient _http;
 
-        //http is used to request calls (CRUD)
         public ProductService(HttpClient http)
         {
             _http = http;
         }
 
         public List<Product> Products { get; set; } = new List<Product>();
-        public string Message { get; set; } = "Loading Products...";
+        public string Message { get; set; } = "Loading products...";
         public int CurrentPage { get; set; } = 1;
         public int PageCount { get; set; } = 0;
         public string LastSearchText { get; set; } = string.Empty;
@@ -24,8 +23,8 @@ namespace EcommerceBlazor.Client.Services.ProductService
         public async Task<Product> CreateProduct(Product product)
         {
             var result = await _http.PostAsJsonAsync("api/products", product);
-            var newProduct =
-                (await result.Content.ReadFromJsonAsync<ServiceResponse<Product>>()).Data;
+            var newProduct = (await result.Content
+                .ReadFromJsonAsync<ServiceResponse<Product>>()).Data;
             return newProduct;
         }
 
@@ -34,33 +33,28 @@ namespace EcommerceBlazor.Client.Services.ProductService
             var result = await _http.DeleteAsync($"api/products/{product.Id}");
         }
 
-        public async Task GetAdminProduct()
+        public async Task GetAdminProducts()
         {
-            var result = await _http.GetFromJsonAsync<ServiceResponse<List<Product>>>("api/products/admin");
+            var result = await _http
+                .GetFromJsonAsync<ServiceResponse<List<Product>>>("api/products/admin");
             AdminProducts = result.Data;
             CurrentPage = 1;
             PageCount = 0;
-            if(AdminProducts.Count == 0)
-            {
+            if (AdminProducts.Count == 0)
                 Message = "No products found.";
-            }
         }
 
-        //calls a controller and get a product by Id
         public async Task<ServiceResponse<Product>> GetProduct(int productId)
         {
-            var result =
-                await _http.GetFromJsonAsync<ServiceResponse<Product>>($"api/products/{productId}");
+            var result = await _http.GetFromJsonAsync<ServiceResponse<Product>>($"api/products/{productId}");
             return result;
         }
 
         public async Task GetProducts(string? categoryUrl = null)
         {
-            //if no categoryUrl - featured products, if url - category by its categoryUrl
-            var result =
-                categoryUrl == null ? 
+            var result = categoryUrl == null ?
                 await _http.GetFromJsonAsync<ServiceResponse<List<Product>>>("api/products/featured") :
-                await _http.GetFromJsonAsync<ServiceResponse<List<Product>>>($"api/products/category/{categoryUrl}");                ; 
+                await _http.GetFromJsonAsync<ServiceResponse<List<Product>>>($"api/products/category/{categoryUrl}");
             if (result != null && result.Data != null)
                 Products = result.Data;
 
@@ -68,10 +62,8 @@ namespace EcommerceBlazor.Client.Services.ProductService
             PageCount = 0;
 
             if (Products.Count == 0)
-                Message = "No products found.";
+                Message = "No products found";
 
-            //After using GetProducts method in a component
-            //The event will Invoke and subscribe to some other method
             ProductsChanged.Invoke();
         }
 
@@ -100,7 +92,8 @@ namespace EcommerceBlazor.Client.Services.ProductService
         public async Task<Product> UpdateProduct(Product product)
         {
             var result = await _http.PutAsJsonAsync($"api/products", product);
-            return (await result.Content.ReadFromJsonAsync<ServiceResponse<Product>>()).Data;
+            var content = await result.Content.ReadFromJsonAsync<ServiceResponse<Product>>();
+            return content.Data;
         }
     }
 }

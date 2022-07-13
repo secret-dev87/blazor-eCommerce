@@ -26,6 +26,12 @@ else
 					</select>
 				</div>
 			}
+			@if(product.Variants != null && product.Variants.Count == 1)
+			{
+				<div class="mb-3">
+					<h6>@GetSelectedVariant().ProductType.Name</h6>
+				</div>
+			}
 			@if(GetSelectedVariant() != null)
 			{
 				@* it makes original price look small and crossed if it is lower than current price*@
